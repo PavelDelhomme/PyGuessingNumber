@@ -19,6 +19,8 @@ class NumberGuessingGame:
         return random.randint(self.LOWER, self.HIGHER)
 
     def logic(self, userNumber, random_num, chances):
+        # todo Stop the script or ask to run a new game when you loose or win
+        # todo change the name of this method
         if userNumber == random_num:
             print(f"Yeah ! You got is in {chances + 1} step{'s' if chances > 1 else ''}!")
             self.is_running = False
@@ -41,6 +43,7 @@ class NumberGuessingGame:
         :return:
         """
         random_num = self.get_random_number()
+        print(f"The random number is : {random_num}")
 
         print(f"The random number was been generated from {self.LOWER} to {self.HIGHER}")
 
